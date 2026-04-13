@@ -13,11 +13,11 @@ export function About() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
         <div className="md:col-span-2">
           <p className="text-2xl text-zinc-600 leading-relaxed">
-            Software Engineer with{" "}
-            <span className="text-black font-semibold">3+ years of experience</span> in React
-            Native and backend development using Node.js, Express.js, and MongoDB. I specialize
-            in building AI-powered mobile applications and intelligent systems, focusing on
-            performance, scalability, and user-centric design.
+            React Native Developer with{" "}
+            <span className="text-black font-semibold">3+ years of experience</span> in designing,
+            developing, and deploying scalable cross-platform applications. I specialize in
+            TypeScript, Firebase, REST API integrations, and AI-powered mobile experiences with a
+            strong focus on performance, usability, and App Store/Play Store deployment.
           </p>
         </div>
         <div className="space-y-6">
@@ -26,7 +26,7 @@ export function About() {
               Core Focus
             </h4>
             <ul className="space-y-3 font-medium">
-              {["Mobile App Development", "Full Stack Architecture", "AI Integration"].map(
+              {["Mobile App Development", "AI Integration", "Store Deployment"].map(
                 (item) => (
                   <li key={item} className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-black" />

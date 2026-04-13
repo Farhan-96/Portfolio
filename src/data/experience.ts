@@ -12,18 +12,19 @@ export type ExperienceEntry = {
 
 export const experience: ExperienceEntry[] = [
   {
-    role: "Sr. React Native Developer",
-    company: "Swam Tech",
+    role: "Mid-Level React Native Developer",
+    company: "Tovo Solution",
     period: "Jan 2025 – Present",
     description: [
-      "Developed cross-platform mobile apps using React Native & TypeScript.",
-      "Built robust backend APIs with Node.js, Express.js, and MongoDB.",
-      "Integrated AI services for chatbot-style mobile applications.",
-      "Deployed applications to App Store, Play Store, and cloud environments.",
+      "Built and maintained cross-platform mobile applications with React Native and TypeScript.",
+      "Integrated REST APIs, Firebase services, and backend workflows for production apps.",
+      "Developed backend CRUD operations with Node.js, Express.js, and MongoDB.",
+      "Implemented AI-powered workflows with OpenAI and Gemini APIs.",
+      "Managed App Store and Play Store deployments, ASO, and cloud backend releases.",
     ],
   },
   {
-    role: "Sr. React Native Developer (Part-Time)",
+    role: "Mid-Level React Native Developer (Part-Time)",
     company: "The Revolution Technologies Pvt Ltd",
     period: "Oct 2024 – Present",
     description: [

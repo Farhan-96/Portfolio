@@ -41,14 +41,14 @@ export function Contact() {
           >
             Send Message
           </a>
-          <button
-            type="button"
-            onClick={() => window.print()}
+          <a
+            href="/Farhan_Fareed_Resume.pdf"
+            download="Farhan_Fareed_Resume.pdf"
             className="px-8 py-4 bg-white border border-zinc-200 text-black rounded-2xl font-bold hover:bg-zinc-50 transition-all flex items-center gap-2"
           >
             <Download size={20} />
             Download CV
-          </button>
+          </a>
         </div>
       </div>
     </section>

@@ -12,16 +12,6 @@ export type ExperienceEntry = {
 
 export const experience: ExperienceEntry[] = [
   {
-    role: "Next.js Web Developer",
-    company: "Personal Projects & Tutorials",
-    period: "2025",
-    description: [
-      "Developed two production-ready websites with Next.js, deployed on Vercel.",
-      "Built Transcript24 — converts video into transcript using AI integration.",
-      "Built PNG to PDF converter with Next.js frontend and Node.js/Express backend.",
-    ],
-  },
-  {
     role: "Mid-Level React Native Developer",
     company: "Tovo Solution",
     period: "Jan 2025 – Present",
@@ -31,6 +21,9 @@ export const experience: ExperienceEntry[] = [
       "Developed backend CRUD operations with Node.js, Express.js, and MongoDB.",
       "Implemented AI-powered workflows with OpenAI and Gemini APIs.",
       "Managed App Store and Play Store deployments, ASO, and cloud backend releases.",
+      "Developed production-ready Next.js websites deployed on Vercel.",
+      "Built Transcript24 — converts video into transcript using AI integration.",
+      "Built PNG to PDF converter with Next.js frontend and Node.js/Express backend.",
     ],
   },
   {

@@ -1,19 +1,14 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
+import { Nav } from "@/components/Nav";
+import { Hero } from "@/components/Hero";
+import { About } from "@/components/About";
+import { Skills } from "@/components/Skills";
+import { Experience } from "@/components/Experience";
+import { Projects } from "@/components/Projects";
+import { EducationCerts } from "@/components/EducationCerts";
+import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
 
-import { Nav } from "./components/Nav";
-import { Hero } from "./components/Hero";
-import { About } from "./components/About";
-import { Skills } from "./components/Skills";
-import { Experience } from "./components/Experience";
-import { Projects } from "./components/Projects";
-import { EducationCerts } from "./components/EducationCerts";
-import { Contact } from "./components/Contact";
-import { Footer } from "./components/Footer";
-
-export default function App() {
+export default function HomePage() {
   return (
     <div className="min-h-screen bg-[#F8F9FC] text-zinc-900 selection:bg-black selection:text-white font-sans relative overflow-x-clip">
       <div className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-cyan-200/40 blur-3xl" />

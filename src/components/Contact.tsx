@@ -42,7 +42,7 @@ export function Contact() {
             Send Message
           </a>
           <a
-            href="/Farhan_Fareed_Resume.pdf"
+            href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/Farhan_Fareed_Resume.pdf`}
             download="Farhan_Fareed_Resume.pdf"
             className="px-8 py-4 bg-white border border-zinc-200 text-black rounded-2xl font-bold hover:bg-zinc-50 transition-all flex items-center gap-2"
           >

@@ -1,8 +1,11 @@
+"use client";
+
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import Image from "next/image";
 import { motion } from "motion/react";
 import {
   Github,
@@ -67,11 +70,13 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="relative aspect-square lg:aspect-auto lg:h-[600px] bg-zinc-100 rounded-3xl overflow-hidden border border-zinc-200 group shadow-2xl"
         >
-          <img
+          <Image
             src={profileImage}
             alt="Farhan Fareed"
-            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-            referrerPolicy="no-referrer"
+            fill
+            className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+            sizes="(max-width: 1024px) 100vw, 600px"
+            priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
           <div className="absolute bottom-10 left-10 right-10 text-white">

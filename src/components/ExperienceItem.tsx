@@ -6,7 +6,6 @@
 import { ChevronRight } from "lucide-react";
 
 type ExperienceItemProps = {
-  key: string;
   role: string;
   company: string;
   period: string;
@@ -14,17 +13,13 @@ type ExperienceItemProps = {
 };
 
 export function ExperienceItem({
-  key,
   role,
   company,
   period,
   description,
 }: ExperienceItemProps) {
   return (
-    <div
-      key={key}
-      className="relative pl-8 border-l border-zinc-200 pb-12 last:pb-0"
-    >
+    <div className="relative pl-8 border-l border-zinc-200 pb-12 last:pb-0">
       <div className="absolute left-[-5px] top-0 w-[9px] h-[9px] bg-black rounded-full" />
       <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
         <div>

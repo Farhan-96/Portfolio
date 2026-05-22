@@ -1,30 +1,41 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Farhan Fareed — Portfolio
 
-# Run and deploy your AI Studio app
+Next.js portfolio site showcasing React Native and web development experience.
 
-This contains everything you need to run your app locally.
+## Run locally
 
-View your app in AI Studio: https://ai.studio/apps/3cd3479f-1c62-48c2-827c-c23e8d3c19cf
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
+**Prerequisites:** Node.js 20+
 
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+
+   ```bash
+   npm install
+   ```
+
+2. Start the dev server:
+
+   ```bash
+   npm run dev
+   ```
+
+3. Open [http://localhost:3000](http://localhost:3000)
+
+## Build
+
+```bash
+npm run build
+```
+
+Static export output is written to the `out/` directory.
 
 ## Deploy (GitHub Pages)
 
-This repo is set up to deploy automatically to GitHub Pages on every push to `main`.
+The site deploys automatically on push to `main` via GitHub Actions.
 
 1. In GitHub, open **Settings → Pages**
 2. Set **Source** to **GitHub Actions**
-3. Push to `main` (or run the workflow manually from the **Actions** tab)
+3. Push to `main` (or run the workflow manually)
 
-Your site will be available at `https://<username>.github.io/<repo>/`.
+Your site will be available at `https://farhan-96.github.io/Portfolio/`.
+
+For local development, run without `GITHUB_PAGES` so assets load from `/`.

@@ -1,8 +1,11 @@
+"use client";
+
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import Image, { type StaticImageData } from "next/image";
 import { motion } from "motion/react";
 import { ExternalLink } from "lucide-react";
 
@@ -11,7 +14,7 @@ type ProjectCardProps = {
   description: string;
   tags: string[];
   link?: string;
-  screenshot?: string;
+  screenshot?: string | StaticImageData;
 };
 
 export function ProjectCard({ title, description, tags, link, screenshot }: ProjectCardProps) {
@@ -21,12 +24,15 @@ export function ProjectCard({ title, description, tags, link, screenshot }: Proj
       className="p-6 bg-white/90 backdrop-blur border border-zinc-200 rounded-3xl shadow-lg shadow-zinc-200/70 hover:shadow-xl hover:shadow-zinc-300/60 transition-all group"
     >
       {screenshot ? (
-        <img
-          src={screenshot}
-          alt={`${title} screenshot`}
-          className="w-full h-48 object-cover rounded-2xl border border-zinc-200 mb-5"
-          referrerPolicy="no-referrer"
-        />
+        <div className="relative w-full h-48 mb-5">
+          <Image
+            src={screenshot}
+            alt={`${title} screenshot`}
+            fill
+            className="object-cover rounded-2xl border border-zinc-200"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+        </div>
       ) : (
         <div className="w-full h-48 rounded-2xl border border-dashed border-zinc-200 bg-zinc-50 mb-5 flex items-center justify-center text-xs font-semibold uppercase tracking-wider text-zinc-400">
           Screenshot will be added

@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import type { StaticImageData } from "next/image";
 import askAiChatbotScreenshot from "../assets/ask-ai-chatbot.png";
 import profileNestScreenshot from "../assets/profilenest.png";
 import calAiAppScreenshot from "../assets/cal-ai-app.png";
@@ -22,7 +23,7 @@ export type ProjectEntry = {
   description: string;
   tags: string[];
   link?: string;
-  screenshot?: string;
+  screenshot?: StaticImageData;
 };
 
 export const featuredProjects: ProjectEntry[] = [

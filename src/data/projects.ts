@@ -14,6 +14,8 @@ import trainifyScreenshot from "../assets/trainify.png";
 import talyAppScreenshot from "../assets/taly-app.png";
 import statisticsMathHelperScreenshot from "../assets/statistics-math-helper.png";
 import noteGenieScreenshot from "../assets/note-genie.png";
+import transcript24Screenshot from "../assets/transcript-24.png";
+import pngToPdfScreenshot from "../assets/png-to-pdf.png";
 
 export type ProjectEntry = {
   title: string;
@@ -29,7 +31,6 @@ export const featuredProjects: ProjectEntry[] = [
     description:
       "AI-powered chatbot with authentication, image & link Q&A, OTP, calendar, and IAP integration.",
     tags: ["React Native", "AI Integration", "Node.js", "IAP"],
-    link: "https://apps.apple.com/us/app/ai-chatbot-ai-writer-groo/id6748308805",
     screenshot: askAiChatbotScreenshot,
   },
   {
@@ -45,7 +46,6 @@ export const featuredProjects: ProjectEntry[] = [
     description:
       "Calorie and health tracking mobile app with AI-assisted insights and personalized recommendations.",
     tags: ["React Native", "AI Integration", "HealthTech"],
-    link: "https://apps.apple.com/us/app/cal-ai-app-calorie-tracker/id6757143072",
     screenshot: calAiAppScreenshot,
   },
   {
@@ -53,7 +53,6 @@ export const featuredProjects: ProjectEntry[] = [
     description:
       "Nutrition-focused mobile app for tracking protein intake and daily macro targets.",
     tags: ["React Native", "Health Tracking", "Analytics"],
-    link: "https://apps.apple.com/us/app/protein-tracker-ai-scanner/id6758942494",
     screenshot: proteinTrackerScreenshot,
   },
   {
@@ -61,7 +60,6 @@ export const featuredProjects: ProjectEntry[] = [
     description:
       "Financial utility app for instant loan calculations, repayment planning, and monthly schedule insights.",
     tags: ["React Native", "FinTech", "Calculator"],
-    link: "https://apps.apple.com/us/app/loan-calculator-emi-mortgage/id6758389503",
     screenshot: loanCalculatorScreenshot,
   },
   {
@@ -140,6 +138,22 @@ export const featuredProjects: ProjectEntry[] = [
     tags: ["React Native", "Education", "Math"],
     link: "https://apps.apple.com/us/app/statistics-ai-the-math-solver/id6757214209",
     screenshot: statisticsMathHelperScreenshot,
+  },
+  {
+    title: "Transcript24",
+    description:
+      "Next.js tutorial project that converts video into transcript using AI. Deployed on Vercel.",
+    tags: ["Next.js", "AI Integration", "Vercel"],
+    link: "https://transcript-247.vercel.app/",
+    screenshot: transcript24Screenshot,
+  },
+  {
+    title: "PNG to PDF Converter",
+    description:
+      "Next.js web app that converts PNG images into PDF documents, powered by a Node.js and Express.js backend (no AI).",
+    tags: ["Next.js", "Node.js", "Express.js", "Vercel"],
+    link: "https://png-to-pdf-frontend.vercel.app/",
+    screenshot: pngToPdfScreenshot,
   },
   {
     title: "Resumley Website",

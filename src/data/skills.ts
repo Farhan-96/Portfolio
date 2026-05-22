@@ -6,7 +6,6 @@
 export const skills = {
   mobile: [
     "React Native",
-    "React.js",
     "Expo",
     "TypeScript",
     "JavaScript",
@@ -17,6 +16,7 @@ export const skills = {
     "iOS",
     "Android",
   ],
+  web: ["React.js", "Next.js"],
   backend: [
     "Node.js",
     "Express.js",

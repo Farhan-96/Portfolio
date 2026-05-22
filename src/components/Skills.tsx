@@ -3,13 +3,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { Code2, Smartphone, Database, Cpu, Globe } from "lucide-react";
+import { Code2, Smartphone, Database, Cpu, Globe, Layout } from "lucide-react";
 import { skills } from "../data/skills";
 import { SectionTitle } from "./ui/SectionTitle";
 import { SkillBadge } from "./ui/SkillBadge";
 
 const groups = [
   { key: "mobile" as const, title: "Mobile & Frontend", icon: Smartphone },
+  { key: "web" as const, title: "Website Development", icon: Layout },
   { key: "backend" as const, title: "Backend & DB", icon: Database },
   { key: "ai" as const, title: "AI & Intelligence", icon: Cpu },
   { key: "tools" as const, title: "Cloud & Tools", icon: Globe },
@@ -19,7 +20,7 @@ export function Skills() {
   return (
     <section id="skills" className="mb-32">
       <SectionTitle icon={Code2}>Technical Arsenal</SectionTitle>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
         {groups.map(({ key, title, icon: Icon }) => (
           <div key={key} className="space-y-4">
             <h3 className="font-bold text-lg flex items-center gap-2">

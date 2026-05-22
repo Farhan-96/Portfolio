@@ -26,7 +26,7 @@ export function About() {
               Core Focus
             </h4>
             <ul className="space-y-3 font-medium">
-              {["Mobile App Development", "AI Integration", "Store Deployment"].map(
+              {["Mobile App Development", "Website Development", "AI Integration", "Store Deployment"].map(
                 (item) => (
                   <li key={item} className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-black" />

@@ -11,10 +11,16 @@ import { ProjectCard } from "./ProjectCard";
 
 export function Projects() {
   const upcomingTitles = new Set(["Notigift App", "Note Genie", "Auction App"]);
+  const isWebProject = (project: (typeof featuredProjects)[number]) =>
+    project.tags.some((tag) => tag === "Next.js");
   const highlightedProjects = featuredProjects.filter((project) => project.link && project.screenshot);
+  const webProjects = featuredProjects.filter(isWebProject);
   const upcomingProjects = featuredProjects.filter((project) => upcomingTitles.has(project.title));
   const otherProjects = featuredProjects.filter(
-    (project) => !(project.link && project.screenshot) && !upcomingTitles.has(project.title),
+    (project) =>
+      !(project.link && project.screenshot) &&
+      !upcomingTitles.has(project.title) &&
+      !isWebProject(project),
   );
 
   return (
@@ -25,6 +31,25 @@ export function Projects() {
         <p className="text-zinc-500 mb-6">Verified App Store projects with preview images.</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {highlightedProjects.map((p) => (
+            <ProjectCard
+              key={p.title}
+              title={p.title}
+              description={p.description}
+              tags={[...p.tags]}
+              link={p.link}
+              screenshot={p.screenshot}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div className="mb-12">
+        <h3 className="text-2xl font-bold tracking-tight mb-2">Web Projects (Next.js)</h3>
+        <p className="text-zinc-500 mb-6">
+          Next.js tutorial websites deployed on Vercel — includes AI and full-stack utility apps.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {webProjects.map((p) => (
             <ProjectCard
               key={p.title}
               title={p.title}

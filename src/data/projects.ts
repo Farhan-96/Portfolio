@@ -28,26 +28,69 @@ export type ProjectEntry = {
 
 export const featuredProjects: ProjectEntry[] = [
   {
-    title: "Ask-AI ChatBot",
+    title: "E-Commerce REST API",
     description:
-      "AI-powered chatbot with authentication, image & link Q&A, OTP, calendar, and IAP integration.",
-    tags: ["React Native", "AI Integration", "Node.js", "IAP"],
-    screenshot: askAiChatbotScreenshot,
+      "Personal REST API for an e-commerce platform covering products, users, and orders — with MongoDB, CRUD endpoints, request validation, and structured REST responses.",
+    tags: ["Python", "FastAPI", "MongoDB", "REST API"],
+  },
+  {
+    title: "Winnabit",
+    description:
+      "Production-ready cross-platform app with REST APIs, Firebase, push notifications, secure auth, and Android Health Connect for step tracking. CI/CD via GitHub Actions and Expo EAS Build & Submit.",
+    tags: ["React Native", "Expo", "TypeScript", "Firebase", "Health Connect"],
   },
   {
     title: "ProfileNest",
     description:
-      "Cross-platform application featuring home screen widgets for both iOS and Android platforms.",
-    tags: ["React Native", "iOS Widgets", "Android Widgets"],
+      "Digital business networking app published on the Apple App Store — responsive UIs, REST APIs for profile management, and Firebase services optimized for production.",
+    tags: ["React Native", "Firebase", "App Store"],
     link: "https://apps.apple.com/us/app/profilenest-business-cards/id6743096135",
     screenshot: profileNestScreenshot,
   },
   {
-    title: "Cal Ai App",
+    title: "Cal AI",
     description:
-      "Calorie and health tracking mobile app with AI-assisted insights and personalized recommendations.",
-    tags: ["React Native", "AI Integration", "HealthTech"],
+      "AI-powered calorie tracking application with OpenAI integration for intelligent nutrition features, reusable UI components, and optimized responsiveness.",
+    tags: ["React Native", "OpenAI", "HealthTech"],
     screenshot: calAiAppScreenshot,
+  },
+  {
+    title: "LoanBuddy (Loan Calculator)",
+    description:
+      "Mobile loan calculator with intuitive financial calculation features, responsive UI, and reusable components — published for mobile platforms.",
+    tags: ["React Native", "FinTech", "Calculator"],
+    screenshot: loanCalculatorScreenshot,
+  },
+  {
+    title: "AI ChatBot",
+    description:
+      "AI chatbot application powered by OpenAI APIs with conversational UI, real-time AI responses, and a focus on performance and smooth user experience.",
+    tags: ["React Native", "OpenAI", "AI Integration"],
+    screenshot: askAiChatbotScreenshot,
+  },
+  {
+    title: "Transcript24",
+    description:
+      "AI-powered web application that converts video and audio into text transcripts using OpenAI APIs — Next.js frontend with backend APIs for transcript generation.",
+    tags: ["Next.js", "Node.js", "OpenAI"],
+    link: "https://transcript-247.vercel.app/",
+    screenshot: transcript24Screenshot,
+  },
+  {
+    title: "PNG to PDF Converter",
+    description:
+      "Web application for converting PNG images into PDF documents — Next.js frontend with Node.js and Express.js backend services.",
+    tags: ["Next.js", "Node.js", "Express.js"],
+    link: "https://png-to-pdf-frontend.vercel.app/",
+    screenshot: pngToPdfScreenshot,
+  },
+  {
+    title: "Next African Generation",
+    description:
+      "Published community-driven mobile platform for social impact, engagement, and educational growth.",
+    tags: ["React Native", "Community", "App Store"],
+    link: "https://apps.apple.com/us/app/next-african-generation/id6742995337",
+    screenshot: nextAfricanGenerationScreenshot,
   },
   {
     title: "Protein Tracker",
@@ -55,21 +98,6 @@ export const featuredProjects: ProjectEntry[] = [
       "Nutrition-focused mobile app for tracking protein intake and daily macro targets.",
     tags: ["React Native", "Health Tracking", "Analytics"],
     screenshot: proteinTrackerScreenshot,
-  },
-  {
-    title: "Loan Calculator",
-    description:
-      "Financial utility app for instant loan calculations, repayment planning, and monthly schedule insights.",
-    tags: ["React Native", "FinTech", "Calculator"],
-    screenshot: loanCalculatorScreenshot,
-  },
-  {
-    title: "Next African Generation",
-    description:
-      "Community-driven mobile platform built for social impact, engagement, and educational growth.",
-    tags: ["React Native", "Community", "Mobile App"],
-    link: "https://apps.apple.com/us/app/next-african-generation/id6742995337",
-    screenshot: nextAfricanGenerationScreenshot,
   },
   {
     title: "Notigift App",
@@ -86,96 +114,66 @@ export const featuredProjects: ProjectEntry[] = [
   },
   {
     title: "DAF: Replica For Stuttering",
-    description: "iOS-based FYP application designed to support speech fluency for stuttering therapy.",
-    tags: ["iOS", "Speech Assistance", "FYP"],
+    description:
+      "Final Year Project — iOS application designed to support speech fluency for stuttering therapy (BS Information Technology).",
+    tags: ["iOS", "Speech Assistance", "Academic Project"],
   },
   {
     title: "Trainify Inc",
-    description: "Fitness and training app focused on structured workout plans and user progress.",
+    description:
+      "Fitness and training app focused on structured workout plans and user progress.",
     tags: ["React Native", "Fitness", "Mobile App"],
     screenshot: trainifyScreenshot,
   },
   {
     title: "Digital Quran",
-    description: "Islamic mobile app offering digital Quran reading experience and quick navigation.",
+    description:
+      "Islamic mobile app offering digital Quran reading experience and quick navigation.",
     tags: ["React Native", "Islamic App", "Mobile App"],
   },
   {
     title: "Digital Tasbeeh",
-    description: "Simple and accessible digital tasbeeh counter app for daily use.",
+    description:
+      "Simple and accessible digital tasbeeh counter app for daily use.",
     tags: ["React Native", "Utility App", "Islamic App"],
   },
   {
     title: "Taly App",
-    description: "Mobile application built for streamlined user tasks and daily activity workflows.",
+    description:
+      "Mobile application built for streamlined user tasks and daily activity workflows.",
     tags: ["React Native", "Productivity", "Mobile App"],
     screenshot: talyAppScreenshot,
   },
   {
     title: "Note Genie",
-    description: "AI-enhanced note-taking application for organizing and managing notes efficiently.",
+    description:
+      "AI-enhanced note-taking application for organizing and managing notes efficiently.",
     tags: ["React Native", "AI Integration", "Productivity"],
     screenshot: noteGenieScreenshot,
   },
   {
-    title: "Auction App",
-    description:
-      "Upcoming mobile app focused on live bidding, item discovery, and real-time auction participation.",
-    tags: ["React Native", "Real-time", "E-commerce"],
-  },
-  {
     title: "Halaly App",
-    description: "Faith-based utility application built around halal lifestyle use-cases.",
+    description:
+      "Faith-based utility application built around halal lifestyle use-cases.",
     tags: ["React Native", "Lifestyle", "Mobile App"],
   },
   {
-    title: "Powered App",
-    description: "Mobile platform delivering feature-rich user flows and scalable app architecture.",
-    tags: ["React Native", "Mobile App", "Scalable Architecture"],
+    title: "Mesob Store",
+    description:
+      "E-commerce-focused project with product browsing and scalable backend workflows.",
+    tags: ["React Native", "E-commerce", "Node.js"],
   },
   {
-    title: "Staistic Math Helper",
-    description: "Math helper application designed to support quick calculations and statistics learning.",
+    title: "Statistics Math Helper",
+    description:
+      "Math helper application designed to support quick calculations and statistics learning.",
     tags: ["React Native", "Education", "Math"],
     link: "https://apps.apple.com/us/app/statistics-ai-the-math-solver/id6757214209",
     screenshot: statisticsMathHelperScreenshot,
   },
-  {
-    title: "Transcript24",
-    description:
-      "Next.js tutorial project that converts video into transcript using AI. Deployed on Vercel.",
-    tags: ["Next.js", "AI Integration", "Vercel"],
-    link: "https://transcript-247.vercel.app/",
-    screenshot: transcript24Screenshot,
-  },
-  {
-    title: "PNG to PDF Converter",
-    description:
-      "Next.js web app that converts PNG images into PDF documents, powered by a Node.js and Express.js backend (no AI).",
-    tags: ["Next.js", "Node.js", "Express.js", "Vercel"],
-    link: "https://png-to-pdf-frontend.vercel.app/",
-    screenshot: pngToPdfScreenshot,
-  },
-  {
-    title: "Resumley Website",
-    description: "Web application built with React.js for resume creation and profile presentation.",
-    tags: ["React.js", "Web App", "Frontend"],
-  },
-  {
-    title: "Mesob Store",
-    description: "E-commerce-focused project with product browsing and scalable backend workflows.",
-    tags: ["React Native", "E-commerce", "Node.js"],
-  },
-  {
-    title: "Termatac",
-    description: "React.js web project built with modern UI patterns and component-based architecture.",
-    tags: ["React.js", "Web App", "Frontend"],
-  },
 ];
 
 export const certifications = [
-  "AI Automation Certification – Zapier",
-  "n8n Level 1 Certification",
-  "JavaScript Basics – HackerRank",
-  "Computer Basics – Al Noor",
+  "JavaScript Basics – HackerRank (August 2023)",
+  "Basic Computer Course – Al Noor Computer Academy (March 2011 – June 2011)",
 ] as const;

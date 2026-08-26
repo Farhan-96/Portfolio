@@ -10,25 +10,44 @@ import { SectionTitle } from "./ui/SectionTitle";
 import { ProjectCard } from "./ProjectCard";
 
 export function Projects() {
-  const upcomingTitles = new Set(["Notigift App", "Note Genie", "Auction App"]);
+  const featuredTitles = new Set([
+    "E-Commerce REST API",
+    "Winnabit",
+    "ProfileNest",
+    "Cal AI",
+    "LoanBuddy (Loan Calculator)",
+    "AI ChatBot",
+  ]);
   const isWebProject = (project: (typeof featuredProjects)[number]) =>
-    project.tags.some((tag) => tag === "Next.js");
-  const highlightedProjects = featuredProjects.filter((project) => project.link && project.screenshot);
-  const webProjects = featuredProjects.filter(isWebProject);
-  const upcomingProjects = featuredProjects.filter((project) => upcomingTitles.has(project.title));
+    project.tags.some((tag) => tag === "Next.js" || tag === "Python");
+  const highlightedProjects = featuredProjects.filter((project) =>
+    featuredTitles.has(project.title),
+  );
+  const webProjects = featuredProjects.filter(
+    (project) => isWebProject(project) && !featuredTitles.has(project.title),
+  );
+  const liveStoreProjects = featuredProjects.filter(
+    (project) =>
+      project.link &&
+      project.screenshot &&
+      !featuredTitles.has(project.title) &&
+      !isWebProject(project),
+  );
   const otherProjects = featuredProjects.filter(
     (project) =>
-      !(project.link && project.screenshot) &&
-      !upcomingTitles.has(project.title) &&
-      !isWebProject(project),
+      !featuredTitles.has(project.title) &&
+      !isWebProject(project) &&
+      !(project.link && project.screenshot),
   );
 
   return (
     <section id="projects" className="mb-32">
       <SectionTitle icon={Smartphone}>Projects</SectionTitle>
       <div className="mb-12">
-        <h3 className="text-2xl font-bold tracking-tight mb-2">Live Projects (With URL + Screenshot)</h3>
-        <p className="text-zinc-500 mb-6">Verified App Store projects with preview images.</p>
+        <h3 className="text-2xl font-bold tracking-tight mb-2">Featured Projects</h3>
+        <p className="text-zinc-500 mb-6">
+          Highlighted work from mobile, AI, and backend development.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {highlightedProjects.map((p) => (
             <ProjectCard
@@ -44,9 +63,9 @@ export function Projects() {
       </div>
 
       <div className="mb-12">
-        <h3 className="text-2xl font-bold tracking-tight mb-2">Web Projects (Next.js)</h3>
+        <h3 className="text-2xl font-bold tracking-tight mb-2">Web & Backend Projects</h3>
         <p className="text-zinc-500 mb-6">
-          Next.js tutorial websites deployed on Vercel — includes AI and full-stack utility apps.
+          Next.js apps and Python/FastAPI API work — AI transcription, utilities, and REST APIs.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {webProjects.map((p) => (
@@ -62,26 +81,34 @@ export function Projects() {
         </div>
       </div>
 
-      <div className="mb-12">
-        <h3 className="text-2xl font-bold tracking-tight mb-2">Upcoming Projects</h3>
-        <p className="text-zinc-500 mb-6">Projects currently in progress and planned for launch.</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {upcomingProjects.map((p) => (
-            <ProjectCard
-              key={p.title}
-              title={p.title}
-              description={p.description}
-              tags={[...p.tags, "Upcoming"]}
-              link={p.link}
-              screenshot={p.screenshot}
-            />
-          ))}
+      {liveStoreProjects.length > 0 && (
+        <div className="mb-12">
+          <h3 className="text-2xl font-bold tracking-tight mb-2">
+            Published Mobile Applications
+          </h3>
+          <p className="text-zinc-500 mb-6">
+            Live App Store projects with public links and previews.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {liveStoreProjects.map((p) => (
+              <ProjectCard
+                key={p.title}
+                title={p.title}
+                description={p.description}
+                tags={[...p.tags]}
+                link={p.link}
+                screenshot={p.screenshot}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       <div className="mb-12">
-        <h3 className="text-2xl font-bold tracking-tight mb-2">Other Projects</h3>
-        <p className="text-zinc-500 mb-6">Additional delivered projects from resume and client work.</p>
+        <h3 className="text-2xl font-bold tracking-tight mb-2">Other React Native Applications</h3>
+        <p className="text-zinc-500 mb-6">
+          Additional delivered apps from client and production work.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {otherProjects.map((p) => (
             <ProjectCard

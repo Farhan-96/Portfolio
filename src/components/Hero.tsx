@@ -36,11 +36,14 @@ export function Hero() {
             <span className="text-zinc-400">Fareed</span>
           </h1>
           <p className="text-xl text-zinc-600 mb-8 max-w-lg leading-relaxed">
-            Mid-Level Software Engineer specializing in{" "}
-            <span className="text-black font-semibold">React Native</span> and{" "}
-            <span className="text-black font-semibold">Node.js</span>. Building
-            intelligent, AI-integrated mobile and web applications that deliver
-            exceptional user experiences.
+            Senior{" "}
+            <span className="text-black font-semibold">React Native</span>{" "}
+            Developer & Mobile Application Engineer — building high-performance
+            Android and iOS apps with Expo, TypeScript, and AI integrations.
+            Expanding into{" "}
+            <span className="text-black font-semibold">Python</span> &{" "}
+            <span className="text-black font-semibold">FastAPI</span> backend
+            development.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
@@ -96,7 +99,7 @@ export function Hero() {
                 Farhan Fareed
               </h3>
               <p className="text-sm font-medium opacity-70 tracking-widest uppercase">
-                Mid-Level Software Engineer
+                Senior React Native Developer
               </p>
               <p className="text-xs opacity-50 flex items-center gap-1 mt-2">
                 <MapPin size={12} />

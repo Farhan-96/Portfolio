@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Farhan Fareed | Portfolio",
+  title: "Farhan Fareed",
   description:
-    "Professional portfolio of Farhan Fareed — React Native and Next.js developer specializing in AI-integrated mobile and web applications.",
+    "Senior React Native Developer and Mobile Application Engineer — cross-platform Android & iOS apps with Expo, TypeScript, AI integrations, and Python/FastAPI backend skills.",
 };
 
 export default function RootLayout({
